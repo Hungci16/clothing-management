@@ -45,5 +45,8 @@
         </div>                                                               
 
         <button type="submit" class="btn btn-success">Xác nhận thanh toán</button>
+        <a href="{{ route('products.index') }}" class="btn btn-secondary mt-3">Quay lại trang sản phẩm</a>
+    
     </form>
+
 @endsection

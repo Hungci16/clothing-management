@@ -10,10 +10,14 @@ class ProductController extends Controller
 {
     // Hiển thị danh sách sản phẩm
     public function index()
-    {
-        $products = Product::all();
-        return view('products.index', compact('products'));
-    }
+{
+    $products = Product::all(); // Lấy danh sách sản phẩm
+    return view('products.index', [
+        'products' => $products,
+        'isAdmin' => false, // Đánh dấu đây là trang user
+    ]);
+}
+
 
     // Hiển thị form thêm sản phẩm
     public function create()
@@ -64,11 +68,22 @@ class ProductController extends Controller
     }
 
     // Hiển thị chi tiết sản phẩm
-    public function showProductDetails($id)
+    // Trong Controller
+    public function show($productId)
     {
-        $product = Product::with('transactions')->findOrFail($id);
-        return view('products.details', compact('product'));
+        // Tìm sản phẩm theo ID
+        $product = Product::find($productId);
+
+        // Kiểm tra nếu sản phẩm không tồn tại
+        if (!$product) {
+            return redirect()->route('products.index')->with('error', 'Sản phẩm không tồn tại');
+        }
+
+        // Trả về view với biến 'product'
+        return view('products.show')->with('product', $product);
     }
+
+
 
     // Hiển thị form sửa sản phẩm
     public function edit($id)
@@ -127,4 +142,42 @@ class ProductController extends Controller
 
         return redirect()->route('products.index')->with('success', 'Sản phẩm đã được xóa.');
     }
+    public function showTransaction($id)
+{
+    $product = Product::findOrFail($id);
+    $transaction = $product->transaction; // Lấy giao dịch liên quan đến sản phẩm
+
+    return view('products.transaction', compact('product', 'transaction'));
+}
+public function add(Request $request)
+{
+    $product = Product::find($request->product_id);
+    $quantity = $request->quantity;
+
+    if ($product) {
+        // Kiểm tra giỏ hàng trong session và thêm sản phẩm vào giỏ
+        $cart = session()->get('cart', []);
+
+        // Nếu sản phẩm đã có trong giỏ hàng thì cộng thêm số lượng
+        if (isset($cart[$product->id])) {
+            $cart[$product->id]['quantity'] += $quantity;
+        } else {
+            // Nếu sản phẩm chưa có thì thêm mới
+            $cart[$product->id] = [
+                'name' => $product->name,
+                'price' => $product->price,
+                'quantity' => $quantity,
+                'image' => $product->image,
+            ];
+        }
+
+        // Lưu giỏ hàng vào session
+        session()->put('cart', $cart);
+
+        return redirect()->route('products.index')->with('success', 'Sản phẩm đã được thêm vào giỏ hàng!');
+    }
+
+    return redirect()->route('products.index')->with('error', 'Sản phẩm không tồn tại.');
+}
+
 }

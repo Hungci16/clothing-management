@@ -6,7 +6,7 @@
 body {
     font-family: "Kalnia", serif;
     font-weight: 400;
-    margin:0px;
+    margin: 0px;
 }
 
 .main {
@@ -98,7 +98,7 @@ body {
     color: #000000;
     transition: color 0.3s;
     position: relative;
-    margin-right:15px;
+    margin-right: 15px;
     margin-left: 10px;
 }
 
@@ -108,26 +108,36 @@ body {
 }
 
 .submenu {
-    display: none; /* Ban đầu ẩn submenu */
+    display: none;
+    /* Ban đầu ẩn submenu */
     position: absolute;
     background-color: white;
     list-style: none;
     padding: 0;
     margin: 0;
-    top: 100%; /* Chỉnh vị trí submenu ngay dưới icon */
-    left: 50%; /* Đặt submenu ở giữa */
-    transform: translateX(-50%); /* Căn giữa submenu so với icon */
+    top: 100%;
+    /* Chỉnh vị trí submenu ngay dưới icon */
+    left: 50%;
+    /* Đặt submenu ở giữa */
+    transform: translateX(-50%);
+    /* Căn giữa submenu so với icon */
     z-index: 2;
-    opacity: 0; /* Ẩn submenu */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease; /* Hiệu ứng mờ và chuyển động */
+    opacity: 0;
+    /* Ẩn submenu */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease;
+    /* Hiệu ứng mờ và chuyển động */
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bóng đổ nhẹ */
-    min-width: 150px; /* Đảm bảo submenu có đủ chiều rộng */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Bóng đổ nhẹ */
+    min-width: 150px;
+    /* Đảm bảo submenu có đủ chiều rộng */
 }
 
 .submenu li {
-    padding: 8px 20px; /* Thêm padding cho các mục trong submenu */
-    transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu nền khi hover */
+    padding: 8px 20px;
+    /* Thêm padding cho các mục trong submenu */
+    transition: background-color 0.3s ease;
+    /* Hiệu ứng chuyển màu nền khi hover */
     position: relative;
 }
 
@@ -143,16 +153,20 @@ body {
 }
 
 .iconsearch1:hover .submenu {
-    display: block; /* Hiển thị submenu khi hover vào icon */
-    opacity: 1; /* Làm submenu hiện lên */
+    display: block;
+    /* Hiển thị submenu khi hover vào icon */
+    opacity: 1;
+    /* Làm submenu hiện lên */
 }
 
 .iconsearch1 {
-    position: relative; /* Để submenu xuất hiện dưới icon */
+    position: relative;
+    /* Để submenu xuất hiện dưới icon */
 }
 
 .iconsearch1 i {
-    cursor: pointer; /* Chỉnh chuột để báo hiệu đây là phần có thể nhấp vào */
+    cursor: pointer;
+    /* Chỉnh chuột để báo hiệu đây là phần có thể nhấp vào */
 }
 
 
@@ -301,7 +315,7 @@ body {
 .team-title::after {
     content: "";
     position: absolute;
-    right:-32%;
+    right: -32%;
     transform: translateX(-50%);
     width: 200px;
     height: 1px;
@@ -339,10 +353,12 @@ body {
     overflow: hidden;
     /* Ẩn phần thừa của hình ảnh */
 }
-.image-container img{
-    height:600px ;
-    width:400px;
+
+.image-container img {
+    height: 600px;
+    width: 400px;
 }
+
 .overlay-text {
     position: absolute;
     bottom: 1%;
@@ -365,12 +381,13 @@ body {
 .overlay-text p span .span1 {
     font-size: 0.5em;
 }
-.anh{
-    width:75px;
-    height:75px;
+
+.anh {
+    width: 75px;
+    height: 75px;
     position: absolute;
-    bottom:-32px;
-    left:-23px
+    bottom: -32px;
+    left: -23px
 }
 
 
@@ -727,7 +744,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 15% 0 3% 0;
-    margin-bottom:10%;
+    margin-bottom: 10%;
 }
 
 .img-deco {
@@ -773,24 +790,27 @@ body {
     font-family: "Kalnia", serif;
     font-weight: 400;
 }
-.img-text button:hover{
+
+.img-text button:hover {
     border: 1px solid #fff;
     background: #000000;
-    color:#ffffff;
+    color: #ffffff;
     transition: 0.7s;
-   
+
 }
-.img-h1 h1{
+
+.img-h1 h1 {
     font-size: 48px;
-    padding:5px 40px;
+    padding: 5px 40px;
     background-color: black;
-    color:#ffffff;
+    color: #ffffff;
     font-weight: 400;
     position: absolute;
-    top:-5%;
-    right:10%;
+    top: -5%;
+    right: 10%;
     margin-bottom: 3%;
 }
+
 .img-h1 h1::after {
     content: "";
     position: absolute;
@@ -805,158 +825,240 @@ body {
 
 /* Cấu hình cho slider */
 .slider {
-    height: 100vh; /* Chiều cao bằng chiều cao viewport */
-    margin-top: -50px; /* Đẩy slider lên trên 50px */
-    position: relative; /* Để định vị các phần tử con */
+    height: 100vh;
+    /* Chiều cao bằng chiều cao viewport */
+    margin-top: -50px;
+    /* Đẩy slider lên trên 50px */
+    position: relative;
+    /* Để định vị các phần tử con */
 }
 
 .slider .list .item {
-    position: absolute; /* Định vị tuyệt đối */
-    inset: 0; /* Bố trí chi tiết 0 cho tất cả các cạnh */
-    overflow: hidden; /* Ẩn phần tử tràn */
-    opacity: 0; /* Mặc định là không hiển thị */
-    transition: .5s; /* Hiệu ứng chuyển tiếp */
+    position: absolute;
+    /* Định vị tuyệt đối */
+    inset: 0;
+    /* Bố trí chi tiết 0 cho tất cả các cạnh */
+    overflow: hidden;
+    /* Ẩn phần tử tràn */
+    opacity: 0;
+    /* Mặc định là không hiển thị */
+    transition: .5s;
+    /* Hiệu ứng chuyển tiếp */
 }
 
 .slider .list .item img {
-    width: 100%; /* Đặt chiều rộng hình ảnh bằng 100% */
-    height: 100%; /* Đặt chiều cao hình ảnh bằng 100% */
-    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+    width: 100%;
+    /* Đặt chiều rộng hình ảnh bằng 100% */
+    height: 100%;
+    /* Đặt chiều cao hình ảnh bằng 100% */
+    object-fit: cover;
+    /* Đảm bảo hình ảnh không bị méo */
 }
 
 .slider .list .item::after {
-    content: ''; /* Tạo một phần tử giả */
-    width: 100%; /* Chiều rộng bằng 100% */
-    height: 100%; /* Chiều cao bằng 100% */
-    position: absolute; /* Định vị tuyệt đối */
-    left: 0; /* Cạnh trái */
-    bottom: 0; /* Cạnh dưới */
+    content: '';
+    /* Tạo một phần tử giả */
+    width: 100%;
+    /* Chiều rộng bằng 100% */
+    height: 100%;
+    /* Chiều cao bằng 100% */
+    position: absolute;
+    /* Định vị tuyệt đối */
+    left: 0;
+    /* Cạnh trái */
+    bottom: 0;
+    /* Cạnh dưới */
     /* background-image: linear-gradient(to top, #000 40%, transparent); Gradient nền */
 }
 
 .slider .list .item .content {
-    position: absolute; /* Định vị tuyệt đối */
-    left: 10%; /* Cách bên trái 10% */
-    top: 20%; /* Cách bên trên 20% */
-    width: 800px; /* Chiều rộng cố định */
-    max-width: 80%; /* Không vượt quá 80% chiều rộng phần tử cha */
-    z-index: 1; /* Đặt z-index để nội dung nằm trên hình ảnh */
+    position: absolute;
+    /* Định vị tuyệt đối */
+    left: 10%;
+    /* Cách bên trái 10% */
+    top: 20%;
+    /* Cách bên trên 20% */
+    width: 800px;
+    /* Chiều rộng cố định */
+    max-width: 80%;
+    /* Không vượt quá 80% chiều rộng phần tử cha */
+    z-index: 1;
+    /* Đặt z-index để nội dung nằm trên hình ảnh */
 }
 
 .slider .list .item .content p:nth-child(1) {
-    text-transform: uppercase; /* Chữ in hoa */
-    letter-spacing: 10px; /* Khoảng cách giữa các chữ */
+    text-transform: uppercase;
+    /* Chữ in hoa */
+    letter-spacing: 10px;
+    /* Khoảng cách giữa các chữ */
 }
 
 .slider .list .item .content h2 {
-    font-size: 100px; /* Kích thước chữ tiêu đề lớn */
-    margin: 0; /* Không có margin */
+    font-size: 100px;
+    /* Kích thước chữ tiêu đề lớn */
+    margin: 0;
+    /* Không có margin */
 }
 
 .slider .list .item.active {
-    opacity: 1; /* Đặt độ mờ thành 100% khi active */
-    z-index: 10; /* Đặt z-index cao hơn khi active */
+    opacity: 1;
+    /* Đặt độ mờ thành 100% khi active */
+    z-index: 10;
+    /* Đặt z-index cao hơn khi active */
 }
 
 /* Hiệu ứng hoạt hình cho nội dung */
 @keyframes showContent {
     to {
-        transform: translateY(0); /* Di chuyển về vị trí ban đầu */
-        filter: blur(0); /* Xóa hiệu ứng mờ */
-        opacity: 1; /* Đặt độ mờ thành 100% */
+        transform: translateY(0);
+        /* Di chuyển về vị trí ban đầu */
+        filter: blur(0);
+        /* Xóa hiệu ứng mờ */
+        opacity: 1;
+        /* Đặt độ mờ thành 100% */
     }
 }
 
 .slider .list .item.active p:nth-child(1),
 .slider .list .item.active h2,
 .slider .list .item.active p:nth-child(3) {
-    transform: translateY(30px); /* Di chuyển xuống 30px */
-    filter: blur(20px); /* Hiệu ứng mờ */
-    opacity: 0; /* Đặt độ mờ thành 0% */
-    animation: showContent .5s .7s ease-in-out forwards; /* Hiệu ứng hoạt hình */
+    transform: translateY(30px);
+    /* Di chuyển xuống 30px */
+    filter: blur(20px);
+    /* Hiệu ứng mờ */
+    opacity: 0;
+    /* Đặt độ mờ thành 0% */
+    animation: showContent .5s .7s ease-in-out forwards;
+    /* Hiệu ứng hoạt hình */
 }
 
 .slider .list .item.active h2 {
-    animation-delay: 1s; /* Đặt độ trễ cho tiêu đề */
+    animation-delay: 1s;
+    /* Đặt độ trễ cho tiêu đề */
 }
 
 .slider .list .item.active p:nth-child(3) {
-    animation-duration: 1.3s; /* Thời gian hoạt hình cho dòng thứ ba */
+    animation-duration: 1.3s;
+    /* Thời gian hoạt hình cho dòng thứ ba */
 }
 
 /* Kiểu dáng cho các nút điều hướng */
 .arrows {
-    position: absolute; /* Định vị tuyệt đối */
-    bottom: 30px; /* Đặt ở phía dưới */
-    left: 50%; /* Căn giữa theo chiều ngang */
-    transform: translateX(-50%); /* Dịch chuyển để căn giữa */
-    z-index: 100; /* Đặt z-index cao */
-    display: flex; /* Hiển thị các nút bên trong */
-    gap: 10px; /* Khoảng cách giữa các nút */
-    justify-content: center; /* Căn giữa các nút */
+    position: absolute;
+    /* Định vị tuyệt đối */
+    bottom: 30px;
+    /* Đặt ở phía dưới */
+    left: 50%;
+    /* Căn giữa theo chiều ngang */
+    transform: translateX(-50%);
+    /* Dịch chuyển để căn giữa */
+    z-index: 100;
+    /* Đặt z-index cao */
+    display: flex;
+    /* Hiển thị các nút bên trong */
+    gap: 10px;
+    /* Khoảng cách giữa các nút */
+    justify-content: center;
+    /* Căn giữa các nút */
 }
 
 .arrows button {
-    background-color: rgba(255, 255, 255, 0.8); /* Màu nền sáng */
-    border: none; /* Không có viền */
-    width: 50px; /* Chiều rộng nút */
-    height: 50px; /* Chiều cao nút */
-    border-radius: 50%; /* Nút hình tròn */
-    font-size: 20px; /* Kích thước chữ */
-    color: #000; /* Màu chữ đen */
-    transition: 0.3s ease; /* Hiệu ứng khi hover */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Màu nền sáng */
+    border: none;
+    /* Không có viền */
+    width: 50px;
+    /* Chiều rộng nút */
+    height: 50px;
+    /* Chiều cao nút */
+    border-radius: 50%;
+    /* Nút hình tròn */
+    font-size: 20px;
+    /* Kích thước chữ */
+    color: #000;
+    /* Màu chữ đen */
+    transition: 0.3s ease;
+    /* Hiệu ứng khi hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Đổ bóng */
 }
 
 .arrows button:hover {
-    background-color: #413d3c; /* Màu nền khi hover */
-    color: white; /* Màu chữ trắng khi hover */
+    background-color: #413d3c;
+    /* Màu nền khi hover */
+    color: white;
+    /* Màu chữ trắng khi hover */
 }
 
 /* Cấu hình cho thumbnail */
 .thumbnail {
-    position: absolute; /* Định vị tuyệt đối */
-    bottom: 50px; /* Đặt phía dưới */
-    z-index: 11; /* Đặt z-index cao hơn */
-    display: flex; /* Hiển thị thumbnail */
-    gap: 10px; /* Khoảng cách giữa các hình ảnh */
-    width: 100%; /* Chiều rộng 100% */
-    height: 250px; /* Chiều cao cố định */
-    padding: 0 50px; /* Padding bên trái và bên phải */
-    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước */
-    overflow: auto; /* Cho phép cuộn */
-    justify-content: right; /* Căn phải */
+    position: absolute;
+    /* Định vị tuyệt đối */
+    bottom: 50px;
+    /* Đặt phía dưới */
+    z-index: 11;
+    /* Đặt z-index cao hơn */
+    display: flex;
+    /* Hiển thị thumbnail */
+    gap: 10px;
+    /* Khoảng cách giữa các hình ảnh */
+    width: 100%;
+    /* Chiều rộng 100% */
+    height: 250px;
+    /* Chiều cao cố định */
+    padding: 0 50px;
+    /* Padding bên trái và bên phải */
+    box-sizing: border-box;
+    /* Đảm bảo padding không làm tăng kích thước */
+    overflow: auto;
+    /* Cho phép cuộn */
+    justify-content: right;
+    /* Căn phải */
 }
 
 .thumbnail::-webkit-scrollbar {
-    width: 0; /* Ẩn scrollbar */
+    width: 0;
+    /* Ẩn scrollbar */
 }
 
 .thumbnail .item {
-    width: 150px; /* Chiều rộng từng thumbnail */
-    height: 220px; /* Chiều cao cố định */
-    filter: brightness(0.7); /* Hiệu ứng sáng cho thumbnail */
-    transition: .5s; /* Hiệu ứng chuyển tiếp */
-    flex-shrink: 0; /* Không cho phép co lại */
+    width: 150px;
+    /* Chiều rộng từng thumbnail */
+    height: 220px;
+    /* Chiều cao cố định */
+    filter: brightness(0.7);
+    /* Hiệu ứng sáng cho thumbnail */
+    transition: .5s;
+    /* Hiệu ứng chuyển tiếp */
+    flex-shrink: 0;
+    /* Không cho phép co lại */
 }
 
 .thumbnail .item img {
-    width: 100%; /* Đặt chiều rộng hình ảnh thumbnail */
-    height: 100%; /* Đặt chiều cao hình ảnh thumbnail */
-    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
-    border-radius: 10px; /* Bo góc hình ảnh */
+    width: 100%;
+    /* Đặt chiều rộng hình ảnh thumbnail */
+    height: 100%;
+    /* Đặt chiều cao hình ảnh thumbnail */
+    object-fit: cover;
+    /* Đảm bảo hình ảnh không bị méo */
+    border-radius: 10px;
+    /* Bo góc hình ảnh */
 }
 
 .thumbnail .item .content {
-    position: absolute; /* Định vị tuyệt đối */
-    inset: auto 10px 10px 10px; /* Căn giữa nội dung trong thumbnail */
+    position: absolute;
+    /* Định vị tuyệt đối */
+    inset: auto 10px 10px 10px;
+    /* Căn giữa nội dung trong thumbnail */
 }
 
 /* Media Query cho màn hình nhỏ */
 @media screen and (max-width: 678px) {
     .thumbnail {
-        justify-content: start; /* Căn trái cho thumbnail */
+        justify-content: start;
+        /* Căn trái cho thumbnail */
     }
+
     .slider .list .item .content h2 {
         font-size: 60
     }
@@ -974,7 +1076,7 @@ body {
     overflow: hidden;
     position: relative;
     margin-top: 50px;
-    margin-bottom:17%;
+    margin-bottom: 17%;
 }
 
 .carousel .list .item {
@@ -1014,12 +1116,13 @@ body {
     font-weight: 300;
     line-height: 1.3em;
 }
-.carousel .list .item .title{
+
+.carousel .list .item .title {
     font-size: 40px;
     font-weight: 300;
     line-height: 1.3em;
     margin-bottom: 15px;
-    color:#415962;
+    color: #415962;
 }
 
 .carousel .list .item .topic {
@@ -1043,7 +1146,7 @@ body {
     font-weight: 500;
     transition: 1s;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
-    color:#415962;
+    color: #415962;
 
 }
 
@@ -1069,7 +1172,7 @@ body {
     height: 220px;
     flex-shrink: 0;
     position: relative;
-    
+
 }
 
 .thumbnail .item img {
@@ -1089,7 +1192,7 @@ body {
 
 .thumbnail .content .title {
     font-weight: 500;
-    
+
 }
 
 .thumbnail .content .description {
@@ -1143,10 +1246,11 @@ body {
     opacity: 0;
     animation: showContent .5s 1s linear 1 forwards;
 }
-.carousel .list .item:nth-child(1) .content .des{
-    color:#415962;
+
+.carousel .list .item:nth-child(1) .content .des {
+    color: #415962;
     font-weight: 100;
-    margin:38px 0;
+    margin: 38px 0;
 
 }
 
@@ -1507,4 +1611,12 @@ body {
     height: 100%;
     object-fit: cover;
 
+}
+
+#product-page h1 {
+    color: #ff6600;
+}
+
+#product-page .container {
+    background: #eaeaea;
 }

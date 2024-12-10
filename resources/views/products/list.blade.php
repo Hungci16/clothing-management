@@ -7,7 +7,16 @@
                     <h5 class="card-title">{{ $product->name }}</h5>
                     <p class="card-text">{{ $product->description }}</p>
                     <p class="card-text"><strong>Giá: </strong>{{ number_format($product->price, 0, ',', '.') }} VND</p>
-                    <a href="#" class="btn btn-primary">Xem chi tiết</a>
+                    <!-- Nút xem chi tiết -->
+                    <a href="{{ route('products.show', $product->id) }}" class="btn btn-primary">Xem chi tiết</a>
+
+                    <!-- Nút thêm vào giỏ hàng -->
+                    <form action="{{ route('cart.add') }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="product_id" value="{{ $product->id }}">
+                        <input type="number" name="quantity" value="1" min="1" class="form-control mt-2" style="width: 80px;">
+                        <button type="submit" class="btn btn-success mt-2">Thêm vào giỏ</button>
+                    </form>
                 </div>
             </div>
         </div>

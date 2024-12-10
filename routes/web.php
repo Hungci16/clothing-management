@@ -13,6 +13,9 @@ use App\Http\Controllers\ReportController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\HomeController;
+use App\Models\Transaction;
+use App\Models\Product;
+
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -32,8 +35,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
 
     Route::resource('products', ProductController::class);
+    Route::get('/admin/products', [AdminController::class, 'index'])->name('admin.products.index'); // Admin
     Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-    
+    Route::get('/products/{id}', [ProductController::class, 'show'])->name('products.show');
+    Route::get('/products/{productId}', [ProductController::class, 'show'])->name('reports.products');
+    Route::get('/products/{productId}', [ProductController::class, 'show'])->name('products.show');
+
+        
 
     Route::get('customers', [CustomerController::class, 'index'])->name('customer.index');
     Route::get('customers_create', [CustomerController::class, 'create'])->name('customer.create');
@@ -87,7 +95,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/reports/products', [ReportController::class, 'productReport'])->name('reports.products');
 });
 Route::middleware(['web'])->group(function () {
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
     Route::get('/cart', [CartController::class, 'showCart'])->name('cart.index');
+    Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
     Route::post('/cart/add/{id}', [CartController::class, 'addToCart'])->name('cart.add');
     Route::post('/cart/update/{id}', [CartController::class, 'updateCart'])->name('cart.update');
     Route::post('/cart/remove/{id}', [CartController::class, 'remove'])->name('cart.remove');
@@ -121,5 +131,30 @@ Route::get('/blog', function () {
 Route::get('/about', function () {
     return view('about');  
 });
+Route::get('/productItem', function () {
+    return view('productItem');  
+});
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/transactions/{id}', function ($id) {
+    // Tìm giao dịch
+    $transaction = Transaction::findOrFail($id);
+
+    // Lấy danh sách sản phẩm liên quan
+    $products = $transaction->products;
+
+    // Trả về view với dữ liệu
+    return view('transactions.show', [
+        'transaction' => $transaction,
+        'products' => $products,
+    ]);
+    Route::get('/products/{id}/transaction', [TransactionController::class, 'showTransaction'])->name('products.transaction');
+
+});
+Route::get('/products/{id}/transaction', function ($id) {
+    $product = Product::findOrFail($id);
+    $transaction = $product->transaction;
+
+    return view('products.transaction', compact('product', 'transaction'));
+});

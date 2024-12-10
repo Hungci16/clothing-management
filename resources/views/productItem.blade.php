@@ -34,19 +34,19 @@
 
                 <div class="menu">
                     <ul>
-                        <li><a href="index.html">Home</a>
+                        <li><a href="/">Home</a>
 
                         </li>
-                        <li><a href="about.html">About</a>
+                        <li><a href="/about">About</a>
 
                         </li>
 
                         <li><a href="index.html"><img src="asset/img/logo.png" alt="" class="anh"></a></li>
-                        <li><a href="product.html">Product</a></li>
-                        <li><a href="blog.html">Blog</a>
+                        <li><a href="/product">Product</a></li>
+                        <li><a href="/blog">Blog</a>
 
                         </li>
-                        <li><a href="contact.html">Contact</a>
+                        <li><a href="/contact">Contact</a>
 
                         </li>
                     </ul>
@@ -57,8 +57,8 @@
                         <div class="iconsearch1">
                             <i class="fa-solid fa-user">
                                 <ul class="submenu">
-                                    <li><a href="login.html">Login</a></li>
-                                    <li><a href="createaccount.html">Sign up</a></li>
+                                    <li><a href="/login">Login</a></li>
+                                    <li><a href="/createaccount">Sign up</a></li>
                                 </ul>
                             </i>
                         </div>

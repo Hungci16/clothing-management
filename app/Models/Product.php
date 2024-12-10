@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Product extends Model
 {
@@ -21,4 +22,10 @@ class Product extends Model
         'color',
         'product_code',
     ];
+
+    // Định nghĩa mối quan hệ One-to-One với Transaction
+    public function transaction(): HasOne
+    {
+        return $this->hasOne(Transaction::class, 'product_id');
+    }
 }

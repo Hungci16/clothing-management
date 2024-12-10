@@ -100,7 +100,7 @@
                         </div>
                     </div>
                     <ul class="sci">
-                        <li style="--i:1"><a href="productItem.html">
+                        <li style="--i:1"><a href="/productItem">
                                 <bottom class="viewmore">View more</bottom>
                             </a></li>
                     </ul>
@@ -116,7 +116,7 @@
                         </div>
                     </div>
                     <ul class="sci">
-                        <li style="--i:1"><a href="productItem.html">
+                        <li style="--i:1"><a href="/productItem">
                                 <bottom class="viewmore">View more</bottom>
                             </a></li>
                     </ul>
@@ -132,7 +132,7 @@
                         </div>
                     </div>
                     <ul class="sci">
-                        <li style="--i:1"><a href="productItem.html">
+                        <li style="--i:1"><a href="/productItem">
                                 <bottom class="viewmore">View more</bottom>
                             </a></li>
                     </ul>
@@ -148,7 +148,7 @@
                         </div>
                     </div>
                     <ul class="sci">
-                        <li style="--i:1"><a href="productItem.html">
+                        <li style="--i:1"><a href="/productItem">
                                 <bottom class="viewmore">View more</bottom>
                             </a></li>
                     </ul>
@@ -168,7 +168,7 @@
                         </div>
                     </div>
                     <ul class="sci">
-                        <li style="--i:1"><a href="productItem.html">
+                        <li style="--i:1"><a href="/productItem">
                                 <bottom class="viewmore">View more</bottom>
                             </a></li>
                     </ul>
@@ -184,7 +184,7 @@
                         </div>
                     </div>
                     <ul class="sci">
-                        <li style="--i:1"><a href="productItem.html">
+                        <li style="--i:1"><a href="/productItem">
                                 <bottom class="viewmore">View more</bottom>
                             </a></li>
                     </ul>
@@ -200,7 +200,7 @@
                         </div>
                     </div>
                     <ul class="sci">
-                        <li style="--i:1"><a href="productItem.html">
+                        <li style="--i:1"><a href="/productItem">
                                 <bottom class="viewmore">View more</bottom>
                             </a></li>
                     </ul>
@@ -216,7 +216,7 @@
                         </div>
                     </div>
                     <ul class="sci">
-                        <li style="--i:1"><a href="productItem.html">
+                        <li style="--i:1"><a href="/productItem">
                                 <bottom class="viewmore">View more</bottom>
                             </a></li>
                     </ul>
@@ -250,7 +250,7 @@
                             </div>
                         </div>
                         <ul class="sci1">
-                            <li style="--i:1"><a href="productItem.html">
+                            <li style="--i:1"><a href="/productItem">
                                     <bottom class="viewmore1">View more</bottom>
                                 </a></li>
                         </ul>
@@ -273,7 +273,7 @@
                                 </div>
                             </div>
                             <ul class="sci2">
-                                <li style="--i:1"><a href="productItem.html">
+                                <li style="--i:1"><a href="/productItem">
                                         <bottom class="viewmore2">View more</bottom>
                                     </a></li>
                             </ul>
@@ -289,7 +289,7 @@
                                 </div>
                             </div>
                             <ul class="sci2">
-                                <li style="--i:1"><a href="productItem.html">
+                                <li style="--i:1"><a href="/productItem">
                                         <bottom class="viewmore2">View more</bottom>
                                     </a></li>
                             </ul>
@@ -305,7 +305,7 @@
                                 </div>
                             </div>
                             <ul class="sci2">
-                                <li style="--i:1"><a href="productItem.html">
+                                <li style="--i:1"><a href="/productItem">
                                         <bottom class="viewmore2">View more</bottom>
                                     </a></li>
                             </ul>
@@ -326,7 +326,7 @@
                                 </div>
                             </div>
                             <ul class="sci2">
-                                <li style="--i:1"><a href="productItem.html">
+                                <li style="--i:1"><a href="/productItem">
                                         <bottom class="viewmore2">View more</bottom>
                                     </a></li>
                             </ul>
@@ -342,7 +342,7 @@
                                 </div>
                             </div>
                             <ul class="sci2">
-                                <li style="--i:1"><a href="productItem.html">
+                                <li style="--i:1"><a href="/productItem">
                                         <bottom class="viewmore2">View more</bottom>
                                     </a></li>
                             </ul>
@@ -358,7 +358,7 @@
                                 </div>
                             </div>
                             <ul class="sci2">
-                                <li style="--i:1"><a href="productItem.html">
+                                <li style="--i:1"><a href="/productItem">
                                         <bottom class="viewmore2">View more</bottom>
                                     </a></li>
                             </ul>

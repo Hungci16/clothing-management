@@ -4,26 +4,20 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class AddProductIdToTransactionsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
-        Schema::create('transactions', function (Blueprint $table) {
-            $table->id();
-            $table->date('transaction_date');
-            $table->decimal('total_amount', 15, 2);
-            $table->timestamps();
+        Schema::table('transactions', function (Blueprint $table) {
+            $table->foreignId('product_id')->nullable()->constrained('products')->onDelete('cascade');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
-        Schema::dropIfExists('transactions');
+        Schema::table('transactions', function (Blueprint $table) {
+            $table->dropForeign(['product_id']);
+            $table->dropColumn('product_id');
+        });
     }
-};
+}

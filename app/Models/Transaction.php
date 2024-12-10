@@ -1,21 +1,26 @@
 <?php
 
-// app/Models/Transaction.php
-
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Transaction extends Model
 {
-    // Các thuộc tính và phương thức khác
+    use HasFactory;
 
-    /**
-     * Mối quan hệ ngược lại với bảng products
-     */
-    public function product()
+    // Quan hệ một-một (mỗi Transaction thuộc về một Product)
+    public function product(): BelongsTo
     {
-        return $this->belongsTo(Product::class);
+        return $this->belongsTo(Product::class, 'product_id');
     }
+
+    // Quan hệ nhiều-nhiều (một Transaction có thể có nhiều Products)
+    public function products(): BelongsToMany
+{
+    return $this->belongsToMany(Product::class, 'custom_pivot_table_name');
 }
 
+}    
